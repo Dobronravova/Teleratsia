@@ -59,31 +59,6 @@ $(function () {
     }
 });
 
-// $(function(){
-//     $('.slider-thumb').slick({
-//         autoplay: true,
-//         vertical: true,
-//         infinite: true,
-//         verticalSwiping: true,
-//         slidesPerRow: 5,
-//         slidesToShow: 5,
-//         asNavFor: '.slider-preview',
-//         focusOnSelect: true,
-//         verticalSwiping: true
-//     });
-//     $('.slider-preview').slick({
-//         autoplay: true,
-//         vertical: true,
-//         infinite: true,
-//         slidesPerRow: 1,
-//         slidesToShow: 1,
-//         asNavFor: '.slider-thumb',
-//         arrows: false,
-//         draggable: true,
-//         verticalSwiping: true
-//     });
-// });
-
 $(function () {
     new WOW().init();
     if ($(".slider-for").length){
@@ -108,8 +83,6 @@ $(function () {
 
          // Set active class to first thumbnail slides
          $('.slider-nav .slick-slide').eq(0).addClass('slick-active');
-
-         // On before slide change match active thumbnail to current slide
          $('.slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             var mySlideNumber = nextSlide;
             $('.slider-nav .slick-slide').removeClass('slick-active');
@@ -246,23 +219,71 @@ $(document).ready(function() {
             $('.account-block').removeClass('animated fadeInRight').addClass('animated fadeOutRight');
         }
     });
-
-    $(function() {
-        $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
-            $(this)
-                .addClass('active').siblings().removeClass('active')
-                .closest('.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
-        });
-    });
-
-    $(function() {
-        $('.pop').on('click', function() {
-            $('.imagepreview').attr('src', $(this).find('img').attr('src'));
-            $('#imagemodal').modal('show');
-        });
-    });
-
 });
+
+
+$(function() {
+    $('.list1 .placeholder').on('click', function (ev) {
+      $('.list1 .list__ul').toggle();
+    });
+     $('.list1 .list__ul a').on('click', function (ev) {
+       ev.preventDefault();
+       var index = $(this).parent().index();
+       $('.list1 .placeholder').text( $(this).text() );
+       console.log($('.list__ul').find('li').eq(index).html());
+       $('.list1 .list__ul').find('li').eq(index).prependTo('.list__ul');
+       $('.list1 .list__ul').toggle();   
+       
+     });
+    $('.list1 select').on('change', function (e) {
+      $('.list1 .placeholder').text(this.value);
+      $(this).animate({width: $('.list1 .placeholder').width() + 'px' });
+    });
+
+    $('.list2 .placeholder').on('click', function (ev) {
+      $('.list2 .list__ul').toggle();
+    });
+     $('.list2 .list__ul a').on('click', function (ev) {
+       ev.preventDefault();
+       var index = $(this).parent().index();
+       $('.list2 .placeholder').text( $(this).text() );
+       console.log($('.list__ul').find('li').eq(index).html());
+       $('.list2 .list__ul').find('li').eq(index).prependTo('.list__ul');
+       $('.list2 .list__ul').toggle();   
+       
+     });
+    $('.list2 select').on('change', function (e) {
+      $('.list1 .placeholder').text(this.value);
+      $(this).animate({width: $('.list2 .placeholder').width() + 'px' });
+    });
+
+    $('.list3 .placeholder').on('click', function (ev) {
+      $('.list3 .list__ul').toggle();
+    });
+     $('.list3 .list__ul a').on('click', function (ev) {
+       ev.preventDefault();
+       var index = $(this).parent().index();
+       $('.list3 .placeholder').text( $(this).text() );
+       console.log($('.list__ul').find('li').eq(index).html());
+       $('.list3 .list__ul').find('li').eq(index).prependTo('.list__ul');
+       $('.list3 .list__ul').toggle();   
+       
+     });
+    $('.list3 select').on('change', function (e) {
+      $('.list3 .placeholder').text(this.value);
+      $(this).animate({width: $('.list3 .placeholder').width() + 'px' });
+    });
+});
+
+
+$(function() {
+    $(".tab_item").not(":first").hide();
+    $(".tab").click(function() {
+    $(".tab").removeClass("active").eq($(this).index()).addClass("active");
+    $(".tab_item").hide().eq($(this).index()).fadeIn()
+    }).eq(0).addClass("active");
+});
+
 
 $(function() {
     function init() {

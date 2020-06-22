@@ -612,25 +612,28 @@ img.logo_prod {
 	padding-top: 5px;
 }
 
-.service_form input{
+.service_form input {
     margin: 5px auto 15px auto;
+    font-size: 16px;
+    line-height: 19px;
+    color: #878787;
+    font-family: Gilroy-SemiBold;
 }
 
-.service_form button, .search_device_form button{
-    background: -o-linear-gradient(346.66deg, #F6851F 1.17%, #F66C1F 97.57%);
+button:not(.dropbtn){
+	background: -o-linear-gradient(346.66deg, #F6851F 1.17%, #F66C1F 97.57%);
     background: linear-gradient(103.34deg, #F6851F 1.17%, #F66C1F 97.57%);
     border-radius: 41px;
     font-family: Gilroy-Bold;
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
-    margin: 48px auto auto auto;
     padding: 18px;
-    width: 400px;
     border: 1px solid transparent;
+    margin: 0 auto;
 }
 
-.service_form button:hover,  .search_device_form button:hover{
+button:not(.dropbtn):hover {
 	border: 1px solid #F66C1F;
     background: transparent;
     color: #F66C1F;
@@ -638,6 +641,14 @@ img.logo_prod {
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
+
+
+.service_form button, .search_device_form button, .service_form_section button{
+    width: 400px;    
+    margin: 48px auto auto auto;
+}
+
+
 
 .placeholder {
 	cursor: pointer;
@@ -847,7 +858,201 @@ span.tab.active {
     margin-bottom: 55px;
 }
 
+.registration_section{
+	margin-bottom: 135px;
+}
 
+.service_form.lk_form{
+	width: 70%;
+	margin: 0 0 100px 0;
+}
+
+.service_form.lk_form label {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+}
+
+.service_form.lk_form div:last-of-type label {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+        align-self: center;
+    padding-top: 0;
+}
+
+.registration_section .tabs{
+	margin-bottom: 35px;
+	display: block;
+    text-align: center;
+}
+
+.registration_section .tabs span.tab{
+	font-size: 13px;
+	line-height: 15px;
+	color: #E2E2E2;
+	padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.registration_section .tabs span.tab:hover{
+	color: #F6851F;
+}
+
+.registration_section .tab + .tab{
+	margin-left: 25px;
+}
+
+.registration_section .service_form button{
+    width: 100%;
+}
+
+
+button:disabled,
+button[disabled]{
+	opacity: 0.3;
+}
+
+
+button:disabled:hover,
+button[disabled]:hover{
+	opacity: 0.8;
+}
+
+.registration_section .tabs span.tab.active{
+	font-family: Gilroy-Regular;
+	color: #F6851F;
+    border-bottom: 0;
+}
+
+
+.new_project_form.service_form label {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+}
+
+.registration_section .new_project_form.service_form button {
+    width: auto;
+    padding: 18px 18%;
+}
+
+.requisites_form_section button {
+    display: block;
+    padding: 18px 11%;
+}
+
+.requisites_form_section .service_form{
+	width: 75%;
+}
+
+.requisites_form_section .service_form label {
+    -ms-flex-preferred-size: 32%;
+    flex-basis: 32%;
+}
+
+.tab_item .table{
+	font-size: 16px;
+    line-height: 19px;
+    font-family: Gilroy-SemiBold;
+    margin-bottom: 24vw;
+}
+
+.tab_item .table-header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+    color: #000000;
+}
+
+.tab_item .table-header div, .tab_item .table-row div {
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    margin: 20px 0;
+}
+
+.tab_item .table-row{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	color: #878787;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.table-row button{
+	margin:0;
+    padding: 18px 22%;
+}
+
+
+.modal {
+	display: none;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.11);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 11111;
+}
+
+.modal .modal-container {
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.modal .modal-container .modal-form {
+	width: 66vw;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+    position: relative;
+    padding: 45px 80px 100px 80px;
+}
+
+.modal-form .header{
+	text-align: center;
+}
+
+.modal-form .service_form{
+	width: 100%
+}
+
+.modal-form .new_project_form.service_form label {
+    -ms-flex-preferred-size: 36%;
+    flex-basis: 36%;
+}
+
+.close{
+    top: 13px;
+    right: 18px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.modal .modal-container .modal-form.thanks{
+	width: 52vw;
+	padding: 11vw 8vw 12vw 8vw;
+}
+
+.modal-form.thanks .header{
+	text-align: left;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 0;
+}
 .full_slide.support_slider .slide{
 	padding-top:0;
 	padding-bottom: 0;

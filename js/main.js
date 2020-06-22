@@ -49,7 +49,6 @@ $(function () {
 
             }
            scrollPos = st;
-           // $("body.inside").css("padding-top", "115px");
         });
         $(window).scroll(function() {
         if ( $(window).scrollTop() >= $('body').offset().top ) {
@@ -80,8 +79,6 @@ $(function () {
         });
     }
          $('.slider-nav .slick-slide').removeClass('slick-active');
-
-         // Set active class to first thumbnail slides
          $('.slider-nav .slick-slide').eq(0).addClass('slick-active');
          $('.slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             var mySlideNumber = nextSlide;
@@ -221,7 +218,6 @@ $(document).ready(function() {
     });
 });
 
-
 $(function() {
     $('.list1 .placeholder').on('click', function (ev) {
       $('.list1 .list__ul').toggle();
@@ -276,6 +272,9 @@ $(function() {
 });
 
 
+
+
+
 $(function() {
     $(".tab_item").not(":first").hide();
     $(".tab").click(function() {
@@ -283,6 +282,27 @@ $(function() {
     $(".tab_item").hide().eq($(this).index()).fadeIn()
     }).eq(0).addClass("active");
 });
+
+
+$(function () {
+    $("#open_modal").click(function() {
+        $(".modal").fadeIn('easy');
+    });
+  $(document).mouseup(function (e){ // событие клика по веб-документу
+    var div = $(".modal-form"); // тут указываем ID элемента
+    var close = $(".close");
+    if (!div.is(e.target)// если клик был не по нашему блоку
+        && div.has(e.target).length === 0  ||  close.is(e.target)) // и не по его дочерним элементам
+    { 
+    $(".modal").fadeOut('easy'); // скрываем его
+    }
+  });
+
+    $("button.registration_submit:not([disabled])").click(function() {
+        $(".modal").fadeIn('easy');
+    });
+});
+
 
 
 $(function() {

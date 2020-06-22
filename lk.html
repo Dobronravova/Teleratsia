@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Service</title>
+    <title>Registration</title>
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="./css/bootstrap-reboot.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
@@ -151,32 +151,121 @@
   <div class="slide" style=""><img class="" src="img/service_slide.png" alt=""></div>
 </div>
 
-
-<div class="container service_section">
-  <div class="row">
-    <div class="col-12 col-lg-5">
-      <div class="header wow fadeInUp" data-wow-duration=".5s" data-wow-delay="1s">Сервис и ремонт</div>
-      <div class="descreption fadeInUp wow" data-wow-duration=".5s" data-wow-delay="1s">
-        <p>Найти настоящего мастера в Москве довольно проблематично, практически все современные приборы содержат сложные электронные узлы, хрупкие микросхемы, разобраться в которых может только профессионал. Для качественного обслуживания также необходимо специальное оборудование и программное обеспечение, при помощи которых техника тестируется, и только после этого проводят ремонт.</p>
-        <p>Наш «Сервис центр» имеет все необходимое для эффективного и качественного обслуживания и починки сломавшихся приборов. Своим клиентам мы предлагаем ремонт</p>
-        <p>Обслуживание в нашем сервисном центре в Москве имеет массу преимуществ. Мы всегда заботимся о своих клиентах, поэтому ремонтируем приборы не только в стационаре, но и на дому у заказчика. Для оптовых заказчиков, которые сдают 3 и более единиц техники, клиентов, заключивших постоянный или разовый договор, предусмотрены приятные бонусы.</p>
+<div class="container registration_section">
+  <div class="tabs">
+    <span class="tab">Мои данные</span>
+    <span class="tab">Реквизиты</span>
+    <span class="tab">Мои проекты</span>
+  </div>
+  <div class="container tab_content">
+    <div class="tab_item">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="header wow fadeInUp" data-wow-duration=".5s" data-wow-delay="1s">Личные данные</div>
+              <div class="service_form lk_form">
+                <div><label>Имя*</label><input type="text" autocomplete="off"></div>
+                <div><label>Контактный <br>телефон*</label><input type="tel" autocomplete="off"></div>
+                <div><label>E-mail*</label><input type="email" autocomplete="off"></div>
+                <div><label>ИНН компании*</label><input type="text" autocomplete="off"></div>
+                <button class="registration_submit" type="submit" disabled="disabled">Зарегестрироваться</button>
+                <button class="registration_submit" type="submit">Зарегестрироваться</button>
+                <button type="submit">Скачать каталог</button>
+              </div>
+              <div class="modal">
+              <div class="modal-container"> 
+                <div class="modal-form thanks">
+                  <img class="close" src="img/close.svg" alt="">
+                  <div class="header">Спасибо за регистрацию. В ближайшее время придет письмо с логином паролем</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 text-center"><img src="img/service_content.png" alt="" class=""/></div>
+        </div>
+      </div>
+      <div class="container service_form_section">
+        <div class="header">Внести новый проект</div>
+        <div class="service_form new_project_form">
+          <div><label>Наименование <br>проекта</label><input type="text" autocomplete="off"></div>
+          <div><label>Наименование <br>конечного заказчика</label><input type="text" autocomplete="off"></div>
+          <div><label>Контактное лицо <br>конечного заказчика (ФИО, <br>контактный телефон, e-mail)</label><input type="text" autocomplete="off"></div>
+          <div><label>Наименование <br>конечного заказчика</label><input type="text" autocomplete="off"></div>
+          <div><label>Стадия проекта</label><input type="text" autocomplete="off"></div>
+          <div><label>Ссылка на конкурсную <br>процедуру на ЭТП</label><input type="text" autocomplete="off"></div>
+          <div><label>Сроки реализации проекта</label><input type="text" autocomplete="off"></div>
+          <button type="submit">Добавить</button>
+        </div>
       </div>
     </div>
-    <div class="col-12 col-lg-7 text-center"><img src="img/service_content.png" alt="" class=""/></div>
+    <div class="tab_item">
+      <div class="container service_form_section requisites_form_section">
+        <div class="service_form">
+          <div><label>Покупатель</label><input type="text" autocomplete="off"></div>
+          <div><label>Адрес</label><input type="text" autocomplete="off"></div>
+          <div><label>Телефон</label><input type="tel" autocomplete="off"></div>
+          <div><label>Факс</label><input type="tel" autocomplete="off"></div>
+          <div><label>Расчетный счет</label><input type="text" autocomplete="off"></div>
+          <div><label>Банк</label><input type="text" autocomplete="off"></div>
+          <div><label>БИК</label><input type="text" autocomplete="off"></div>
+          <div><label>Корр. Счет</label><input type="text" autocomplete="off"></div>
+          <div><label>ИНН</label><input type="text" autocomplete="off"></div>
+          <div><label>КПП</label><input type="text" autocomplete="off"></div>
+          <div><label>Код ОКВЭД</label><input type="text" autocomplete="off"></div>
+          <div><label>Код ОКПО</label><input type="text" autocomplete="off"></div>
+          <div><label>Грузополучатель</label><input type="text" autocomplete="off"></div>
+        </div>
+        <button type="submit">Сохранить</button>
+      </div>
+    </div>
+    <div class="tab_item">        
+      <div class="table">
+        <div class="table-header">
+          <div>Наименование <br>проекта</div>
+          <div>Наименование <br>конечного заказчика</div>
+          <div>Дата внесения</div>
+          <div></div>
+        </div>
+        <div class="table-row">
+          <div>Кулибин</div>
+          <div>Газпром</div>
+          <div>10.12 2020</div>
+          <div><button type="submit" id="open_modal">Подробнее</button></div>
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal-container"> 
+          <div class="modal-form">
+            <img class="close" src="img/close.svg" alt="">
+            <div class="header">Проект</div>
+            <div class="service_form new_project_form">
+              <div><label>Наименование <br>проекта</label><input type="text" autocomplete="off"></div>
+              <div><label>Наименование <br>конечного заказчика</label><input type="text" autocomplete="off"></div>
+              <div><label>Контактное лицо <br>конечного заказчика (ФИО, <br>контактный телефон, e-mail)</label><input type="text" autocomplete="off"></div>
+              <div><label>Наименование <br>конечного заказчика</label><input type="text" autocomplete="off"></div>
+              <div><label>Стадия проекта</label><input type="text" autocomplete="off"></div>
+              <div><label>Ссылка на конкурсную <br>процедуру на ЭТП</label><input type="text" autocomplete="off"></div>
+              <div><label>Сроки реализации проекта</label><input type="text" autocomplete="off"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container service_form_section">
+        <div class="header">Внести новый проект</div>
+        <div class="service_form new_project_form">
+          <div><label>Наименование <br>проекта</label><input type="text" autocomplete="off"></div>
+          <div><label>Наименование <br>конечного заказчика</label><input type="text" autocomplete="off"></div>
+          <div><label>Контактное лицо <br>конечного заказчика (ФИО, <br>контактный телефон, e-mail)</label><input type="text" autocomplete="off"></div>
+          <div><label>Наименование <br>конечного заказчика</label><input type="text" autocomplete="off"></div>
+          <div><label>Стадия проекта</label><input type="text" autocomplete="off"></div>
+          <div><label>Ссылка на конкурсную <br>процедуру на ЭТП</label><input type="text" autocomplete="off"></div>
+          <div><label>Сроки реализации проекта</label><input type="text" autocomplete="off"></div>
+          <button type="submit">Добавить</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-<div class="container service_form_section">
-  <div class="header">Оставьте заявку</div>
-  <div class="service_form">
-    <div><label>Имя</label><input type="text" autocomplete="off"></div>
-    <div><label>Контактный <br>телефон</label><input type="tel" autocomplete="off"></div>
-    <div><label>E-mail</label><input type="email" autocomplete="off"></div>
-    <div><label>Описание <br>проблемы</label><textarea></textarea></div>
-    <button type="submit">Отправить</button>
-  </div>
-</div>
-
 
 <div class="full black_block">
   <div class="container"></div>

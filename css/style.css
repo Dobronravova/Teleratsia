@@ -642,6 +642,22 @@ button:not(.dropbtn):hover {
     transition: all .3s ease-in-out;
 }
 
+ button.slick-arrow{
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+ }
+
+ button.slick-arrow:hover{
+ 	border: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+ }
+
+ button[role="tab"]:hover{
+ 	border: 0;
+ }
 
 .service_form button, .search_device_form button, .service_form_section button{
     width: 400px;    
@@ -863,6 +879,10 @@ span.tab.active {
 	display: block;
 }
 
+.tab_content img{
+	max-width: 100%
+}
+
 .content_section{
 	padding-top: 55px;
 	margin-bottom: 70px;
@@ -930,6 +950,8 @@ button:disabled:hover,
 button[disabled]:hover{
 	opacity: 0.8;
 }
+
+
 
 .registration_section .tabs span.tab.active{
 	font-family: Gilroy-Regular;
